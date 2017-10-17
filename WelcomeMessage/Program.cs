@@ -11,10 +11,8 @@ namespace WelcomeMessage
         static void Main(string[] args)
         {
             Console.Write("Enter Your Name: ");
-            Console.Write("Enter Your Age: ");
             string name = Console.ReadLine();
-            string age = Console.ReadLine();
-            Console.WriteLine("Welcome to my program " + name + ", your recorded age is " + age);
+            Console.WriteLine("Welcome to my program " + name );
 
 
             // Wait at the end
