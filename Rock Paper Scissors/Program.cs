@@ -56,22 +56,22 @@ namespace Rock_Paper_Scissors
 
         private static void GiveFeedback(string result, string userChoice, string computerChoice)
         {
-            
+            Console.WriteLine($"{result}! You chose {userChoice} and the computer chose {computerChoice}!");
         }
 
         private static string DetermineWinner(string userChoice, string computerChoice)
         {
             if (userChoice == "Rock")
             {
-                if(computerChoice == "Rock")
+                if (computerChoice == "Rock")
                 {
                     return "Draw";
                 }
-                else if(computerChoice == "Paper")
+                else if (computerChoice == "Paper")
                 {
                     return "Lose";
                 }
-                else if(computerChoice == "Scissors")
+                else 
                 {
                     return "Win";
                 }
@@ -86,12 +86,12 @@ namespace Rock_Paper_Scissors
                 {
                     return "Draw";
                 }
-                else if (computerChoice == "Scissors")
+                else 
                 {
                     return "Lose";
                 }
             }
-            else if (userChoice == "Scissors")
+            else 
             {
                 if (computerChoice == "Rock")
                 {
@@ -101,7 +101,7 @@ namespace Rock_Paper_Scissors
                 {
                     return "Win";
                 }
-                else if (computerChoice == "Scissors")
+                else 
                 {
                     return "Draw";
                 }
@@ -110,12 +110,40 @@ namespace Rock_Paper_Scissors
 
         private static string ComputerTurn()
         {
-            
+            Random rnd = new Random();
+            int choice = rnd.Next(1,4);
+            if(choice == 1)
+            {
+                return "Rock";
+            }          
+            else if (choice == 2)
+            {
+                return "Paper";
+            }
+            else
+            {
+                return "Scissors";
+            }
         }
 
         private static string UserTurn()
         {
-            
+            Console.WriteLine("1. Rock");
+            Console.WriteLine("2. Paper");
+            Console.WriteLine("3. Scissors");
+            int choice = int.Parse(Console.ReadLine());
+            if (choice == 1)
+            {
+                return "Rock";
+            }
+            else if (choice == 2)
+            {
+                return "Paper";
+            }
+            else
+            {
+                return "Scissors";
+            }
         }
 
         private static void PrintScore(ref int userScore, ref int computerScore)
