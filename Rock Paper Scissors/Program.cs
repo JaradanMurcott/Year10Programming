@@ -10,6 +10,7 @@ namespace Rock_Paper_Scissors
     {
         static void Main(string[] args)
         {
+            Console.Title = "mans not hot";
             int userScore = 0;
             int computerScore = 0;
             bool repeat = true;
